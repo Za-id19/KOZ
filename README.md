@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HTML Starter Templates
 
 A collection of **starter HTML templates** licensed under **MIT**.
@@ -48,3 +49,7 @@ projects.
 If you have suggestions or improvements, feel free to open an issue or submit a pull request.
 
 Happy Coding! 💻✨
+=======
+# KOZ
+K.O.Z website
+>>>>>>> 0564531dac3a97eeed62557763d422ea2284f25b
