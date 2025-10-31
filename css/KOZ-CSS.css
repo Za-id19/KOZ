@@ -1,0 +1,16 @@
+body{
+    background-color: #877979;
+    font-family:Cambria, Cochin, Georgia, Times, sans-serif;
+    text-align: center;
+   background-image: url(1_11zon.png);
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+ table{
+    color: #000000
+}
+h1{
+    color: wheat
+}
