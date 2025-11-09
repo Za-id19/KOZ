@@ -146,6 +146,6 @@ header h1 {
 }
 
 #overlay.active {
-  opacity: 1;
+  opacity: 4;
   pointer-events: auto;
 }
