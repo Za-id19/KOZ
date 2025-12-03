@@ -2,7 +2,7 @@ body {
   background-color: black;
   font-family: Cambria, Cochin, Georgia, Times, sans-serif;
   text-align: center;
-  background-image: url(end%20-2.png);
+  background-image: url( %D8%B1%D9%88%D8%B2%201.png);
   background-size: 70%;
   background-position: center;
   background-attachment: fixed;
@@ -59,7 +59,7 @@ header h1 {
 .center .logo {
   width: 55px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 100px;
   box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
   transition: transform 0.3s ease;
 }
