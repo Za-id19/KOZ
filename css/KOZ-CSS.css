@@ -2,7 +2,7 @@ body {
   background-color: black;
   font-family: Cambria, Cochin, Georgia, Times, sans-serif;
   text-align: center;
-  background-image: url( %D8%B1%D9%88%D8%B2%201.png);
+  background-image: url(%D8%B1%D9%88%D8%B2%201.png);
   background-size: 70%;
   background-position: center;
   background-attachment: fixed;
@@ -123,7 +123,9 @@ header h1 {
   color: #ff9400;
   font-size: 20px;
   font-weight: bold;
-  transition: color 0.3s, transform 0.3s;
+  transition:
+    color 0.3s,
+    transform 0.3s;
 }
 
 .nav-links a:hover {
@@ -148,4 +150,51 @@ header h1 {
 #overlay.active {
   opacity: 4;
   pointer-events: auto;
+}
+.footer {
+  background: #000000;
+  color: #ff9400;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #ff9400;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s;
+  position: relative;
+}
+
+
+.footer-links a:hover {
+  background: #ff4d00;
+  transform: scale(1.1);
+  color: black;
+}
+
+/* حركة ضغط خفيفة */
+.footer-links a:active {
+  transform: scale(0.95);
+transition: right 0.4s ease;
+  z-index: 2000;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+}
+body {
+  padding-top: 80px;
 }
