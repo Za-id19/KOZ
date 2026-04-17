@@ -152,14 +152,19 @@ header h1 {
   pointer-events: auto;
 }
 .footer {
-  background: #000000;
+  background: #0000;
   color: #ff9400;
   text-align: center;
   padding: 25px 10px;
+transition: right 0.4s ease;
+ backdrop-filter: blur(6px);
 }
 
 .footer-links {
   margin-top: 10px;
+transition: right 0.4s ease;
+ backdrop-filter: blur(6px);
+
 }
 
 .footer-links a {
@@ -169,15 +174,23 @@ header h1 {
   padding: 8px 14px;
   border-radius: 8px;
   display: inline-block;
-  transition: 0.3s;
+
   position: relative;
+transition:
+    color 0.3s,
+    transform 0.3s;
+ backdrop-filter: blur(6px);
 }
 
 
 .footer-links a:hover {
-  background: #ff4d00;
+  background: center;
   transform: scale(1.1);
   color: black;
+transition:
+    color 0.3s,
+    transform 0.3s;
+ backdrop-filter: blur(6px);
 }
 
 /* حركة ضغط خفيفة */
@@ -185,10 +198,11 @@ header h1 {
   transform: scale(0.95);
 transition: right 0.4s ease;
   z-index: 2000;
+color: #fff;
 }
 body {
   min-height: 100vh;
-  display: flex;
+  display: flex ;
   flex-direction: column;
 }
 
