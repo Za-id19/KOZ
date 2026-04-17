@@ -162,7 +162,8 @@ transition: right 0.4s ease;
 
 .footer-links {
   margin-top: 10px;
-transition: right 0.4s ease;
+transition: all 0.4s ease;
+transform: scale(1.05);
  backdrop-filter: blur(6px);
 
 }
@@ -174,7 +175,7 @@ transition: right 0.4s ease;
   padding: 8px 14px;
   border-radius: 8px;
   display: inline-block;
-
+transform: scale(1.05);
   position: relative;
 transition:
     color 0.3s,
