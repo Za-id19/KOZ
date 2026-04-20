@@ -212,7 +212,7 @@ body {
 }
 /* 1. إعدادات الكارد الأساسية (الحجم والخلفية) */
 .car-card {
-  background-color: #111; /* لون خلفية الكارد - تقدر تغيره لأي لون */
+  background-color: black; /* لون خلفية الكارد - تقدر تغيره لأي لون */
   color: white; /* لون النص الأساسي */
   padding: 15px; /* المسافة الداخلية بين حواف الكارد والمحتوى */
   margin: 10px; /* المسافة الخارجية بين الكروت وبعضها */
@@ -230,7 +230,7 @@ body {
 /* حركة لما الماوس ييجي على الكارد يرتفع لفوق شوي */
 .car-card:hover {
 
-transform:   transform: translate(-50%, -50%);
+transform:   transform: translate(-5px);
 
 }
 
