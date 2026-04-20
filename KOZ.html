@@ -36,23 +36,18 @@ async function loadCars() {
 
   const querySnapshot = await getDocs(collection(db, "cars"));
 
-  querySnapshot.forEach((doc) => {
-    const car = doc.data();
+// داخل الـ forEach
+querySnapshot.forEach((doc) => {
+  const car = doc.data();
 
-    container.innerHTML += `
-      <div style="
-        background:#111;
-        color:white;
-        padding:15px;
-        margin:10px;
-        border-radius:10px;
-      ">
-        <img src="${car.image}" style="width:100%; border-radius:10px;">
-        <h2>${car.name}</h2>
-        <p>${car.price} $</p>
-      </div>
-    `;
-  });
+  container.innerHTML += `
+    <div class="car-card">
+      <img src="${car.image}" class="car-image" alt="${car.name}">
+      <h2 class="car-title">${car.name}</h2>
+      <p class="car-price">${car.price} $</p>
+    </div>
+  `;
+});
 }
 
 loadCars();
