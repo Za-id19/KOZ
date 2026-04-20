@@ -11,6 +11,52 @@
 
     <title>KOZ CARS</title>
   </head>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// 🔥 بياناتك (هاي صح من عندك)
+const firebaseConfig = {
+  apiKey: "AIzaSyA6uGKmERwXd8MnPTrjmRYWo1oJKArl5Xo",
+  authDomain: "koz-cars.firebaseapp.com",
+  projectId: "koz-cars",
+  storageBucket: "koz-cars.firebasestorage.app",
+  messagingSenderId: "266418178521",
+  appId: "1:266418178521:web:e67a9b81f1a758d65731c8",
+  measurementId: "G-WNHQ9SR3PG"
+};
+
+// تشغيل Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// 🔥 جلب السيارات وعرضها
+async function loadCars() {
+  const container = document.getElementById("cars-container");
+
+  const querySnapshot = await getDocs(collection(db, "cars"));
+
+  querySnapshot.forEach((doc) => {
+    const car = doc.data();
+
+    container.innerHTML += `
+      <div style="
+        background:#111;
+        color:white;
+        padding:15px;
+        margin:10px;
+        border-radius:10px;
+      ">
+        <img src="${car.image}" style="width:100%; border-radius:10px;">
+        <h2>${car.name}</h2>
+        <p>${car.price} $</p>
+      </div>
+    `;
+  });
+}
+
+loadCars();
+</script>
   <body>
   <header>
   <div class="left">
@@ -34,7 +80,7 @@
 </header>
 
     <div id="overlay"></div>
-
+<div id="cars-container"></div>
 <footer class="footer">
   <p>Powered by<a href="https://kozcooperation.netlify.app/index.html"> © KOZ Tech</a></p>
 
