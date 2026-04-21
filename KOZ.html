@@ -41,12 +41,14 @@ querySnapshot.forEach((doc) => {
   const car = doc.data();
 
   container.innerHTML += `
+  <a href="car.html?id=${doc.id}" class="card-link">
     <div class="car-card">
       <img src="${car.image}" class="car-image" alt="${car.name}">
       <h2 class="car-title">${car.name}</h2>
       <p class="car-price">${car.price} $</p>
     </div>
-  `;
+  </a>
+`;
 });
 }
 
