@@ -1,21 +1,64 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="assets/icon%209%20.1.png" />
-
-  <title>KOZ CARS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Car Details</title>
 </head>
-
 <body>
 
-<h1>Car Details</h1>
+  <h1>Car Details</h1>
 
-<script>
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+  <div id="car-details"></div>
 
-console.log("ID =", id);
-</script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA6uGKmERwXd8MnPTrjmRYWo1oJKArl5Xo",
+      authDomain: "koz-cars.firebaseapp.com",
+      projectId: "koz-cars",
+      storageBucket: "koz-cars.firebasestorage.app",
+      messagingSenderId: "266418178521",
+      appId: "1:266418178521:web:e67a9b81f1a758d65731c8",
+      measurementId: "G-WNHQ9SR3PG"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    async function loadCarDetails() {
+      const container = document.getElementById("car-details");
+
+      if (!id) {
+        container.innerHTML = "<p>No car ID found in the URL.</p>";
+        return;
+      }
+
+      const carRef = doc(db, "cars", id);
+      const carSnap = await getDoc(carRef);
+
+      if (carSnap.exists()) {
+        const car = carSnap.data();
+
+        container.innerHTML = `
+          <div class="car-card">
+            <img src="${car.image}" alt="${car.name}" style="width:300px;">
+            <h2>${car.name}</h2>
+            <p>${car.price} $</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = "<p>Car not found.</p>";
+      }
+    }
+
+    loadCarDetails();
+  </script>
 
 </body>
 </html>
