@@ -267,3 +267,13 @@ transform: translate(-5px)
 color: transparent;
 }
 
+.car-details {
+  text-align: center;
+  color: white;
+}
+
+.car-details img {
+  width: 300px;
+  border-radius: 15px;
+}
+
