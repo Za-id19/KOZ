@@ -161,6 +161,7 @@ transition: right 0.4s ease;
 }
 
 .footer-links {
+color: transparent;
   margin-top: 10px;
 transition: all 0.4s ease;
 transform: scale(1.05);
@@ -169,7 +170,8 @@ transform: scale(1.05);
 }
 
 .footer-links a {
-  color: #ff9400;
+
+  color: transparent;
   text-decoration: none;
   margin: 0 10px;
   padding: 8px 14px;
@@ -229,9 +231,7 @@ body {
 
 /* حركة لما الماوس ييجي على الكارد يرتفع لفوق شوي */
 .car-card:hover {
-
-transform:   transform: translate(-5px);
-
+transform: translate(-5px)
 }
 
 /* 2. إعدادات الصورة */
@@ -262,4 +262,17 @@ transform:   transform: translate(-5px);
   flex-wrap: wrap; /* عشان ينزلو سطر جديد لو الشاشة صغرت */
   justify-content: center; /* توسيط الكروت في نصف الشاشة */
   gap: 15px; /* مسافة بين الكروت */
+}
+.card-link{
+color: transparent;
+}
+
+.car-details {
+  text-align: center;
+  color: white;
+}
+
+.car-details img {
+  width: 300px;
+  border-radius: 15px;
 }
