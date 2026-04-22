@@ -276,4 +276,61 @@ color: transparent;
   width: 300px;
   border-radius: 15px;
 }
+/* ================== 📱 Mobile Responsive ================== */
+@media (max-width: 768px) {
+
+  /* الهيدر */
+  header {
+    padding: 0 15px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .left h1 {
+    font-size: 16px;
+  }
+
+  .menu-btn {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+
+  /* اللوقو */
+  .center .logo {
+    width: 40px;
+  }
+
+  /* الكروت */
+  .car-card {
+    width: 100%; /* يخلي الكارد ياخذ عرض الشاشة */
+    max-width: 350px;
+  }
+
+  /* الصورة */
+  .car-image {
+    height: 180px;
+  }
+
+  /* النص */
+  .car-title {
+    font-size: 18px;
+  }
+
+  .car-price {
+    font-size: 16px;
+  }
+
+  /* الكونتينر */
+  #cars-container {
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  /* الفوتر */
+  .footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+}
 
