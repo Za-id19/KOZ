@@ -8,7 +8,11 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
-
+.details-page {
+  background-image: url("%D8%B1%D9%88%D8%B2%2012.png");
+  background-size: cover;
+  background-position: center;
+}
 /* الهيدر */
 header {
   background-color: rgba(0, 0, 0, 0.6);
@@ -214,6 +218,7 @@ body {
 }
 /* 1. إعدادات الكارد الأساسية (الحجم والخلفية) */
 .car-card {
+
   background-color: black; /* لون خلفية الكارد - تقدر تغيره لأي لون */
   color: white; /* لون النص الأساسي */
   padding: 15px; /* المسافة الداخلية بين حواف الكارد والمحتوى */
@@ -228,7 +233,9 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease; /* عشان نعمل حركة لما الماوس يمر عليه */
 }
-
+.h1-de{
+  color: #fff
+}
 /* حركة لما الماوس ييجي على الكارد يرتفع لفوق شوي */
 .car-card:hover {
 transform: translate(-5px)
